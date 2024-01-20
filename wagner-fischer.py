@@ -1,8 +1,3 @@
-import time
-
-
-def pprint(array):
-    [print(line) for line in array]
 class Spellcheck:
     def __init__(self, numwords=333333):
         self.words_filename = 'words.txt'
