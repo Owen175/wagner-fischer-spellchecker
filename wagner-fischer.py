@@ -4,7 +4,7 @@ import time
 def pprint(array):
     [print(line) for line in array]
 class Spellcheck:
-    def __init__(self, numwords=10000):
+    def __init__(self, numwords=333333):
         self.words_filename = 'words.txt'
         self.numwords=numwords
         self.spelling_filename = 'spellcorrection.txt'
@@ -75,9 +75,4 @@ class Spellcheck:
         return distance_matrix[-1][-1]
 
 spc = Spellcheck()
-x = time.time_ns()
-for i in range(100):
-    print(f'{i}%')
-    spc.spellcheck_word('tweaker', 100)
-print(time.time_ns()-x)
-
+print(spc.spellcheck_word('spcyel', 100))
